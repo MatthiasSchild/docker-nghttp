@@ -1,6 +1,6 @@
 FROM golang:1.15 as builder
 WORKDIR /etc/nghttp
-COPY ./nghttp .
+COPY ./app .
 RUN CGO_ENABLE=0 GOOS=linux GOARCH=amd64 GO111MODULE=on
 
 FROM alpine:3.12
